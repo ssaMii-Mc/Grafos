@@ -31,14 +31,14 @@ public class GrafoMatriz {
     }
 
     public void mostrarMatriz() {
-        // Encabezado de columnas
+       
         System.out.print("  ");
         for (String v : vertices) {
             System.out.printf("%3s", v);
         }
         System.out.println();
 
-        // Filas de la matriz
+        
         for (int i = 0; i < vertices.size(); i++) {
             System.out.printf("%2s", vertices.get(i));
             for (int j = 0; j < vertices.size(); j++) {

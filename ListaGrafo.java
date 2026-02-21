@@ -8,22 +8,21 @@ public class ListaGrafo {
     }
 
     public void agregarVertice(String vertice) {
-        // Si el vertice no existe, lo agrega con una lista vacia
+        
         mapa.putIfAbsent(vertice, new ArrayList<>());
     }
 
     public void agregarArista(String origen, String destino) {
-        // Agregar vertices si no existen
+       
         agregarVertice(origen);
         agregarVertice(destino);
 
-        // Conectar en ambas direcciones (grafo no dirigido)
         mapa.get(origen).add(destino);
         mapa.get(destino).add(origen);
     }
 
     public void mostrarGrafo() {
-        // Ordenar vertices alfabeticamente para salida consistente
+      
         List<String> listaVertices = new ArrayList<>(mapa.keySet());
         Collections.sort(listaVertices);
 
